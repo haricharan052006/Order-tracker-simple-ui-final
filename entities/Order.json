@@ -1,0 +1,60 @@
+{
+    "name": "Order",
+        "type": "object",
+            "properties": {
+        "order_number": {
+            "type": "string",
+                "description": "Auto-generated order number"
+        },
+        "order_name": {
+            "type": "string",
+                "description": "Name of the test order"
+        },
+        "client_name": {
+            "type": "string",
+                "description": "Name of the client"
+        },
+        "test_method": {
+            "type": "string",
+                "description": "Testing method used"
+        },
+        "description": {
+            "type": "string",
+                "description": "Detailed description of the test"
+        },
+        "start_date": {
+            "type": "string",
+                "format": "date",
+                    "description": "Test start date"
+        },
+        "end_date": {
+            "type": "string",
+                "format": "date",
+                    "description": "Test end date"
+        },
+        "photo_interval_hours": {
+            "type": "number",
+                "description": "Photo submission interval in hours"
+        },
+        "status": {
+            "type": "string",
+                "enum": [
+                    "pending",
+                    "in_progress",
+                    "completed",
+                    "overdue"
+                ],
+                    "default": "pending",
+                        "description": "Current order status"
+        }
+    },
+    "required": [
+        "order_name",
+        "client_name",
+        "test_method",
+        "description",
+        "start_date",
+        "end_date",
+        "photo_interval_hours"
+    ]
+}

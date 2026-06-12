@@ -1,0 +1,49 @@
+{
+    "name": "PhotoReminder",
+    "type": "object",
+    "properties": {
+        "order_id": {
+            "type": "string",
+            "description": "Reference to the parent order"
+        },
+        "order_name": {
+            "type": "string",
+            "description": "Name of the order for display"
+        },
+        "client_name": {
+            "type": "string",
+            "description": "Client name for display"
+        },
+        "hour_mark": {
+            "type": "number",
+            "description": "The hour mark for this reminder (e.g. 100, 200, 300)"
+        },
+        "due_date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Calculated due date/time for this reminder"
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "not_updated",
+                "partial",
+                "done"
+            ],
+            "default": "not_updated",
+            "description": "Client updation status: not_updated, partial, or done"
+        },
+        "completed_date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When the client updation was marked as done"
+        }
+    },
+    "required": [
+        "order_id",
+        "order_name",
+        "client_name",
+        "hour_mark",
+        "due_date"
+    ]
+}
