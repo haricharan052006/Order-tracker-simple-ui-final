@@ -31,3 +31,4 @@ This application helps track test orders, daily activities, and photo reminders.
    ```bash
    npm run build
    ```
+this is the simpler version for the order tracker, waiting for the further request updates from the client.
